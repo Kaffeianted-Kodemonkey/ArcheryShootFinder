@@ -1,37 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-{% include head.html %}
+    {% include head.html %}
 
-<body>
-    <!-- HERO -->
-    {% include hero.html %}
+    <body>
+        {% include disclaimer.html %}
+        <!-- HERO -->
+        {% include hero.html %}
 
-    <!-- DESTINATION & INFLUENCER HIGHLIGHT -->
-    <section class="section-padding bg-light">
-        {% include destination.html %}
-    </section>
+        <!-- DESTINATION & INFLUENCER HIGHLIGHT -->
+        <section class="section-padding bg-light">
+            {% include destination.html %}
+        </section>
 
-    <!-- FOR SHOOTERS -->
-    <section id="shooters" class="section-padding">
-        {% include shoots.html %}
-    </section>
+        <!-- FOR SHOOTERS -->
+        <section id="shooters" class="section-padding">
+            {% include shoots.html %}
+        </section>
 
-    <!-- FOR VENUES -->
-    <section id="venues" class="section-padding bg-dark text-white">
-        {% include venues.html %}
-    </section>
+        <!-- FOR VENUES -->
+        <section id="venues" class="section-padding bg-dark text-white">
+            {% include venues.html %}
+        </section>
 
-    <!-- FEEDBACK / WAITLIST -->
-    <section id="join" class="section-padding bg-success text-white">
-        {% include feedback.html %}
-    </section>
+        <!-- FEEDBACK / WAITLIST -->
+        <section id="join" class="section-padding bg-success text-white">
+            {% include feedback.html %}
+        </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-black text-white py-5 text-center">
-        {% include footer.html %}
-    </footer>
+        <!-- FOOTER -->
+        <footer class="bg-black text-white py-5 text-center">
+            {% include footer.html %}
+        </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
 </html>
