@@ -3,7 +3,9 @@
     {% include head.html %}
 
     <body>
+        <!-- Disclaimer -->
         {% include disclaimer.html %}
+
         <!-- HERO -->
         {% include hero.html %}
 
@@ -13,13 +15,28 @@
         </section>
 
         <!-- FOR SHOOTERS -->
-        <section id="shooters" class="section-padding">
-            {% include shoots.html %}
-        </section>
-
-        <!-- FOR VENUES -->
-        <section id="venues" class="section-padding bg-dark text-white">
-            {% include venues.html %}
+        <section class="container mt-5">
+            <hr />
+            <div class="row">
+                <div class="col-md-6">
+                    {% include shoots.html %}
+                </div>
+                <div class="col-md-6">
+                    <!-- FOR VENUES -->
+                    {% include venues.html %}
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col bg-secondary-subtle m-5 p-5 rounded-4 shadow-sm text-center vertical-align: middle">
+                    <a
+                        href="https://app.archeryshootfinder.com"
+                        target="_blank"
+                        class="btn btn-danger btn-lg"
+                        >Launch ASFinder PWA-Directory</a
+                    >
+                </div>
+            </div>
         </section>
 
         <!-- FEEDBACK / WAITLIST -->
