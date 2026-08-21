@@ -4,7 +4,7 @@
 
     <body>
         <!-- Disclaimer -->
-        {% include disclaimer.html %}
+        <!--{% include disclaimer.html %}-->
 
         <!-- HERO -->
         {% include hero.html %}
@@ -16,19 +16,14 @@
 
         <!-- FOR SHOOTERS -->
         <section class="container mt-5">
-            <hr />
             <div class="row">
-                <div class="col-md-6">
+                <div class="col">
                     {% include shoots.html %}
                 </div>
-                <div class="col-md-6">
-                    <!-- FOR VENUES -->
-                    {% include venues.html %}
-                </div>
             </div>
-            <hr />
-            <div class="row">
-                <div class="col mt-0 mb-5 pt-4 pb-5 rounded-4 shadow-sm text-center vertical-align: middle">
+            <!--<hr />-->
+            <div class="row mb-4">
+                <div class="c text-center vertical-align: middle">
                     <a
                         href="https://app.archeryshootfinder.com"
                         target="_blank"
@@ -37,6 +32,14 @@
                     >
                 </div>
             </div>
+            <!--<hr />-->
+            <div class="row mt-4 mb-4">
+                <div class="col">
+                    <!-- FOR VENUES -->
+                    {% include venues.html %}
+                </div>
+            </div>
+
         </section>
 
         <!-- FEEDBACK / WAITLIST -->
