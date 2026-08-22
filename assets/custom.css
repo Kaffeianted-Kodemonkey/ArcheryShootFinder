@@ -1,36 +1,171 @@
+/* ==========================================================================
+   ARCHERY SHOOT FINDER BRAND STYLESHEET
+   Colors derived directly from the official logo sticker
+   ========================================================================== */
+
+:root {
+  /* Brand Colors */
+  --asf-timber-brown: #4d3824;  /* Deep natural text & primary headers */
+  --asf-target-gold:  #d4ab63;  /* High-visibility accent & main buttons */
+  --asf-sage-teal:    #699e97;  /* Accent icons, badges, and active states */
+  --asf-parchment:    #f9f6ef;  /* Soft cream background fill for light sections */
+  --asf-espresso:     #2b241c;  /* Soft, warm dark tone for footers & text darks */
+
+  /* Typography */
+  --asf-font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+
+/* Global Layout Resets */
+body {
+  font-family: var(--asf-font-sans);
+  color: var(--asf-timber-brown);
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+/* ==========================================================================
+   LAYOUT FIX: PREVENT HORIZONTAL SCROLLING (OVERFLOW)
+   ========================================================================== */
+
+/* 1. Force the main site container to clip any rogue elements pushing sideways */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* 2. Fix the Bootstrap carousel inner row breakout space */
+.carousel-inner {
+  overflow: hidden; /* Clips elements trying to push past the slider boundary */
+}
+
+/* 3. Safety reset for columns and rows to prevent layout width calculations from lying */
+.row {
+  --bs-gutter-x: 1.5rem;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* --- SECTION BACKGROUNDS --- */
+.bg-light {
+  background-color: var(--asf-parchment) !important;
+}
+
+.custom-footer-bg {
+  background-color: var(--asf-espresso) !important;
+}
+
+/* --- HERO WRAPPER (RESTORED BACKGROUND) --- */
 .hero {
-    background:
-        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
-        url("/assets/img/target-shoot.png") center/cover no-repeat;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+  background:
+    linear-gradient(rgba(77, 56, 36, 0.65), rgba(43, 36, 28, 0.8)),
+    url("/assets/img/target-shoot.png") center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
-.section-padding {
-    padding: 80px 0;
+/* --- TYPOGRAPHY & TEXT OVERRIDES --- */
+h1, h2, h3, h4, h5, h6, .display-4, .display-5 {
+  color: var(--asf-timber-brown);
+  font-weight: 700;
 }
 
+.hero h2, .custom-footer-bg h2, .custom-footer-bg h4 {
+  color: #ffffff !important;
+}
+
+.text-primary {
+  color: var(--asf-timber-brown) !important;
+}
+
+.text-warning {
+  color: var(--asf-target-gold) !important;
+}
+
+.text-muted {
+  color: #706357 !important; /* Soft brown-gray tracking color */
+}
+
+.text-white-50 {
+  color: rgba(249, 246, 239, 0.7) !important;
+}
+
+/* --- BUTTON LAYOUTS --- */
 .btn-primary {
-    background-color: #2e7d32;
-    border-color: #2e7d32;
+  background-color: var(--asf-target-gold) !important;
+  border-color: var(--asf-target-gold) !important;
+  color: var(--asf-espresso) !important;
+  font-weight: 700;
+  transition: all 0.25s ease-in-out;
 }
 
-.btn-primary:hover {
-    background-color: #1b5e20;
-    border-color: #1b5e20;
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--asf-timber-brown) !important;
+  border-color: var(--asf-timber-brown) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn-outline-light {
+  border-color: rgba(254, 254, 254, 0.5);
+  color: #ffffff;
+  transition: all 0.25s ease-in-out;
+}
+
+.btn-outline-light:hover {
+  background-color: #ffffff !important;
+  color: var(--asf-timber-brown) !important;
+  transform: translateY(-2px);
+}
+
+/* --- CARDS & INTERFACE HOVER --- */
+.card-hover {
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease;
 }
 
 .card-hover:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(77, 56, 36, 0.12) !important;
 }
 
-/* Layout Adjustments for the Full Deck Slider */
-.custom-carousel-btn {
-    width: 5%;
+.card h5.text-primary i {
+  color: var(--asf-sage-teal) !important; /* Sage teal accents on card icons */
 }
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-size: 50%;
+
+hr {
+  border-top: 1px solid rgba(77, 56, 36, 0.12);
+  opacity: 1;
+}
+
+/* --- FORM CONTROL INTERFACE --- */
+.form-control, .form-select {
+  border: 1px solid rgba(77, 56, 36, 0.15);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--asf-sage-teal);
+  box-shadow: 0 0 0 0.25rem rgba(105, 158, 151, 0.25);
+}
+
+/* --- LOGO STICKER EFFECT --- */
+.drop-shadow {
+  filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.45));
+}
+
+/* Utilities */
+.section-padding {
+  padding: 80px 0;
+}
+
+.tracking-wider {
+  letter-spacing: 0.08em;
+}
+footer{
+    background-color: var(--asf-sage-teal) ;
+    color: #ffffff;
+    padding: 20px;
 }

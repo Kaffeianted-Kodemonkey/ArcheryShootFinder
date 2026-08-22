@@ -1,70 +1,93 @@
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-3 mt-5 pt-5">
-            <img
-                src="/assets/img/logo-sticker.png"
-                width="100%"
-                alt="Archery Shoot Finder logo"
-            />
-        </div>
-        <div class="col text-center ms-5">
-            <h2 class="display-5 fw-bold mb-4">
-                Help Shape Archery Shoot Finder
-            </h2>
-            <p class="fs-4">
-                We are building the ultimate single-purpose discovery platform for the archery community. Whether you are a competitive shooter, a bowhunter, or a club
-                organizer, your feedback helps us fine-tune the experience.
-            </p>
-            <p>Drop us a line below or text our team directly at <a href="tell:720.608.1444">720.608.1444</a> We respond within 24–48 hours, Monday through Friday.</p>
+<!-- FOOTER & WAITLIST FORM -->
+<section id="contact" class="section-padding custom-footer-bg text-white py-5" style="background-color: #1b2e24;">
+    <div class="container py-5">
+        <div class="row align-items-center g-5">
 
-            <form
-                action="https://formspree.io/f/mgvnbwwb"
-                method="POST"
-                class="row g-3 justify-content-center"
-            >
-                <div class="col-md-6">
-                    <input
-                        type="text"
-                        name="name"
-                        class="form-control form-control-lg"
-                        placeholder="Your Name"
-                        required
-                    />
-                </div>
-                <div class="col-md-6">
-                    <input
-                        type="email"
-                        name="email"
-                        class="form-control form-control-lg"
-                        placeholder="Email Address"
-                        required
-                    />
-                </div>
-                <div class="col-12">
-                    <select
-                        name="type"
-                        class="form-select form-select-lg"
-                        required
+            <!-- LEFT COLUMN: BRAND STICKER & CALL TO ACTION -->
+            <div class="col-lg-5">
+                <!-- OFFICIAL LOGO STICKER DISPLAY -->
+                <div class="mb-4 text-center">
+                    <img
+                        src="/assets/img/logo-sticker.png"
+                        alt="ASFinder Logo Sticker"
+                        class="img-fluid drop-shadow"
+                        style="max-width: 180px; height: auto;"
                     >
-                        <option value="">I am a...</option>
-                        <option value="shooter">Shooter / Archer</option>
-                        <option value="venue">Venue / Event Organizer</option>
-                    </select>
                 </div>
-                <div class="col-12">
-                    <textarea
-                        name="feedback"
-                        rows="4"
-                        class="form-control form-control-lg"
-                        placeholder="Your feedback or requested features..."
-                    ></textarea>
+
+                <div class="mt-2">
+                    <!--<span class="text-warning text-uppercase fw-bold small tracking-wider">Join the Target Line</span>-->
+                    <h2 class="display-6 fw-bold mt-1 mb-4 text-white">Help Us Fine-Tune the Ultimate Discovery Tool</h2>
+                    <p class="text-white-50 fs-5 mb-4">
+                        Whether you are an active shooter looking for better map discovery or a venue host tracking league registrations, your insight helps build a cleaner tool.
+                    </p>
                 </div>
-                <div class="col-12">
-                    <button type="submit" class="btn btn-light btn-lg px-5">
-                        Submit Feedback & Join Waitlist
-                    </button>
+
+                <!-- CONTACT TOUCHPOINT -->
+                <div class="d-flex align-items-center mt-4">
+                    <div class="bg-white bg-opacity-15 text-warning rounded-circle p-3 me-3">
+                        <i class="fa-solid fa-comment-sms fa-lg"></i>
+                    </div>
+                    <div>
+                        <small class="text-white-50 d-block text-uppercase tracking-wide">Text Our Team Directly</small>
+                        <a href="tel:+17206081444" class="text-white text-decoration-none fw-bold fs-5">720.608.1444</a>
+                    </div>
                 </div>
-            </form>
+
+                <p class="text-white-50 small mt-4">
+                    <i class="fa-solid fa-clock me-2 text-warning"></i>Inboxes are monitored Monday through Friday.<br /> We respond within 24–48 hours.
+                </p>
+            </div>
+
+            <!-- RIGHT COLUMN: LIGHT FORM CONTAINER -->
+            <div class="col-lg-7">
+                <div class="p-4 p-sm-5 rounded-4 bg-white text-dark shadow-lg border border-light">
+                    <h3 class="text-center">We want to hear your feedback</h3>
+                    <hr />
+                    <form action="https://formspree.io" method="POST">
+                        <h4 class="fw-bold mb-4 text-dark"><i class="fa-solid fa-paper-plane text-primary me-2"></i>Send a Message</h4>
+                        <div class="row g-3">
+
+                            <!-- Name Field -->
+                            <div class="col-sm-6">
+                                <label for="formName" class="form-label small fw-bold text-secondary">Your Name</label>
+                                <input type="text" name="name" class="form-control form-control-lg bg-light border-light-subtle text-dark" id="formName" placeholder="Heather" required>
+                            </div>
+
+                            <!-- Email Field -->
+                            <div class="col-sm-6">
+                                <label for="formEmail" class="form-label small fw-bold text-secondary">Email Address</label>
+                                <input type="email" name="email" class="form-control form-control-lg bg-light border-light-subtle text-dark" id="formEmail" placeholder="name@example.com" required>
+                            </div>
+
+                            <!-- Role Selection Dropdown -->
+                            <div class="col-12">
+                                <label for="formRole" class="form-label small fw-bold text-secondary">I am primarily a...</label>
+                                <select name="role" class="form-select form-select-lg bg-light border-light-subtle text-dark" id="formRole" required>
+                                    <option value="" disabled selected>Select your profile type</option>
+                                    <option value="Archer / Shooter">3D Archer / Competitive Shooter</option>
+                                    <option value="Bowhunter">Bowhunter / Field Archer</option>
+                                    <option value="Club / Venue Organizer">Club Owner / Venue Organizer</option>
+                                    <option value="Brand / Influencer">Industry Brand / Creator</option>
+                                </select>
+                            </div>
+
+                            <!-- Message Textarea -->
+                            <div class="col-12">
+                                <label for="formMessage" class="form-label small fw-bold text-secondary">Feedback, Feature Request, or Questions</label>
+                                <textarea name="message" class="form-control form-control-lg bg-light border-light-subtle text-dark" id="formMessage" rows="4" placeholder="Tell us what tools or map filters you want to see most..." required></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn btn-primary btn-lg w-100 py-3 fw-bold shadow-sm">Submit Feedback</button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
         </div>
     </div>
-</div>
+</section>
