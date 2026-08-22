@@ -167,5 +167,38 @@ hr {
 footer{
     background-color: var(--asf-sage-teal) ;
     color: #ffffff;
-    padding: 20px;
+    padding: 5px;
+}
+
+/* --- HERO WRAPPER BASE --- */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* 1. Background Image Layer */
+.hero-bg-image {
+  background: url("/assets/img/target-shoot.png") center center/cover no-repeat;
+}
+
+/* 2. Semi-Transparent Opacity Overlay Tinted Across the Entire Background Image */
+.hero-image-overlay {
+  background-color: rgba(0, 0, 0, 0.4); /* Smooth dark tint to soften image elements */
+}
+
+/* 3. Solid Opaque Background Covering the Whole Left Side of the Viewport Canvas */
+@media (min-width: 992px) {
+  .hero-left-sidebar-bg {
+    width: 50vw; /* Extends completely to the left viewport boundary edge */
+    background-color: #1b2e24 !important; /* Solid, 100% opaque Timber Brown background */
+  }
+}
+
+/* Stacks into a solid protective color background on mobile screens */
+@media (max-width: 991.98px) {
+  .hero {
+    background-color: #1b2e24 !important; /* Fallback opaque backing for mobile rows */
+  }
 }

@@ -1,19 +1,26 @@
-<header class="hero text-white text-center">
-    <div class="container">
-        <h2 class="display-4 fw-bold mb-4"> Stop Hunting for Matches. Start Shooting.</h2>
-        <p class="lead fs-4 mb-5">
-           The ultimate offline-ready map directory for local leagues, 3D mountain courses, and premier archery circuits.
-        </p>
+<!-- HERO -->
+<header class="hero text-white text-md-start text-center position-relative overflow-hidden">
+    <!-- The Background Image Canvas with Global Transparent Opacity Overlay -->
+    <div class="hero-bg-image position-absolute top-0 start-0 w-100 h-100 z-0"></div>
+    <div class="hero-image-overlay position-absolute top-0 start-0 w-100 h-100 z-1"></div>
 
-       <div
-            class="d-flex flex-column flex-sm-row gap-3 justify-content-center"
-        >
-            <a href="#shooters" class="btn btn-primary btn-lg px-5 py-3"
-                >Launch ASFinder</a
-            >
-            <a href="#venues" class="btn btn-outline-light btn-lg px-5 py-3"
-                >I'm a Venue</a
-            >
+    <!-- Solid Opaque Color Block Running Under the Entire Left Side of the Screen -->
+    <div class="hero-left-sidebar-bg position-absolute top-0 start-0 h-100 z-2 d-none d-lg-block"></div>
+
+    <div class="container position-relative z-3">
+        <div class="row">
+            <!-- Left-Aligned Content Column sitting on top of the solid left background -->
+            <div class="col-lg-6 py-3">
+                <h2 class="display-5 fw-bold mb-4">Stop Hunting for Matches. Start Shooting.</h2>
+                <p class="lead fs-4 mb-5 text-light text-opacity-95">
+                   Ultimate offline-ready event directory for local leagues, 3D courses, and premier archery circuits.
+                </p>
+
+                <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-md-start">
+                    <a href="https://app.archeryshootfinder.com/" target="_blank" class="btn btn-primary btn-lg px-5 py-3">Install App</a>
+                    <!--<a href="#venues" class="btn btn-outline-light btn-lg px-5 py-3">I'm a Venue</a>-->
+                </div>
+            </div>
         </div>
     </div>
 </header>
